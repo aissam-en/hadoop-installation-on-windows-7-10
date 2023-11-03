@@ -26,16 +26,32 @@ This tutorial will show you how to install Hadoop on Windows 7, breaking down th
 ## II- Setup Folders and Files 
 
 1. **Create new folder in `C:\` named `hadoop`** 
-We will exptact `hadoop-2.9.2.tar.gz` to this folder `C:\hadoop\`.
+![hadoop_folders_0](./screens/II-Setup_Folders_and_Files/hadoop/hadoop_folders_0.png)
+We will extract `hadoop-2.9.2.tar.gz` to this folder `C:\hadoop\`.
+![extract_hadoop_1](./screens/II-Setup_Folders_and_Files/hadoop/extract_hadoop_1.png)
+![extract_hadoop_2](./screens/II-Setup_Folders_and_Files/hadoop/extract_hadoop_2.png)
 
 2. **Created 3 folders** 
 - First folder named `data`, should be created in `C:\hadoop\hadoop-2.9.2\`. Like `C:\hadoop\hadoop-2.9.2\data`.
+![hadoop_folders_1](./screens/II-Setup_Folders_and_Files/hadoop/hadoop_folders_1.PNG)
 - Second folder named `datanode`, should be created in `C:\hadoop\hadoop-2.9.2\data\`. Like `C:\hadoop\hadoop-2.9.2\data\datanode`.
 - Third folder named `namenode`, should be created also in `C:\hadoop\hadoop-2.9.2\data\`. Like `C:\hadoop\hadoop-2.9.2\data\namenode`.
+![hadoop_folders_2](./screens/II-Setup_Folders_and_Files/hadoop/hadoop_folders_2.PNG)
 
 3. **Extract the `winutils-master.zip` file** 
-We are using Hadoop 2.9.2, so we will copy all files that are in the bin folder of hadoop-2.9.2 folder `winutils-master\hadoop-2.9.2\bin\`, to `%HADOOP_HOME%\bin`. Replacing all files.
+![extract_winutils_1](./screens/II-Setup_Folders_and_Files/winutils/extract_winutils_1.png)
+Enter to `winutils-master` :
+![extract_winutils_2](./screens/II-Setup_Folders_and_Files/winutils/extract_winutils_2.png)
+We will using Hadoop 2.9.2 :
+![extract_winutils_3](./screens/II-Setup_Folders_and_Files/winutils/extract_winutils_3.png)
+so we will copy all files that are in the bin folder of hadoop-2.9.2 folder `winutils-master\hadoop-2.9.2\bin\` : 
+![copy_bin_from](./screens/II-Setup_Folders_and_Files/winutils/copy_bin_from.png)
+to `C:\hadoop\hadoop-2.9.2\bin`. Replacing all files : 
+![copy_bin_to](./screens/II-Setup_Folders_and_Files/winutils/copy_bin_to.png)
 
+4. **Setup Java 11** 
+To avoid errors, create a folder in `C:\` named `java`, then extract the `jdk-11.0.19_windows-x64_bin.zip` file to `C:\java`, (like we did in step II-1-) :
+![extract_java_11](./screens/II-Setup_Folders_and_Files/java11/extract_java_11.PNG)
 
 ## III- Setup Environment Variables 
 click on `windows key` then search for `environment variables`, then click on `edit environment variables for your account`
