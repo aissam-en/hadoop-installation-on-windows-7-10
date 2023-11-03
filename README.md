@@ -4,13 +4,13 @@ This tutorial will show you how to install Hadoop on Windows 7, breaking down th
 
 ## Table of Contents
 
-- [I- Download Files](#)
-- [II- Setup Folders and Files](#)
-- [III- Setup Environment Variables](#)
-- [IV- Setup Configuration Files](#)
-- [V- Testing](#)
-- [VI- Some Hadoop Commands](#)
-- [VII- Stop Hadoop](#)
+- [I- Download Files](#user-content-i--download-files)
+- [II- Setup Folders and Files](#user-content-ii--setup-folders-and-files)
+- [III- Setup Environment Variables](#user-content-iii--setup-environment-variables)
+- [IV- Setup Configuration Files](#user-content-iv--setup-configuration-files)
+- [V- Testing](#user-content-v--testing)
+- [VI- Some Hadoop Commands](#user-content-vi--some-hadoop-commands)
+- [VII- Stop Hadoop](#user-content-vii--stop-hadoop)
 
 ## I- Download Files 
 
