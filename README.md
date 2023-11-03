@@ -259,6 +259,20 @@ The output is like :
 ```
 ![jps](./screens/V-Testing/jps.PNG)
 
+5. **Verify namenode :** 
+In a browser, open this link : 
+```plaintext
+localhost:50070
+```
+![namenode_browser](./screens/V-Testing/namenode_browser.PNG)
+
+6. **Verify Resourcemanger :** 
+In a browser, open this link : 
+```plaintext
+http://localhost:8088
+```
+![Resourcemanger_browser](./screens/V-Testing/Resourcemanger_browser.PNG)
+
 
 ## VI- Some Hadoop Commands 
 
