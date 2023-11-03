@@ -276,5 +276,74 @@ http://localhost:8088
 
 ## VI- Some Hadoop Commands 
 
-## VII- Stop Hadoop 
+1. **Create a folder in hdoop hdfs:** 
+let's start with creating a folder :
+```batch
+hadoop fs -mkdir /aissam_data
+```
+and show it :
+```batch
+hadoop fs -ls /
+```
+![mkdir_ls](./screens/VI-Some_Hadoop_Commands/mkdir_ls.PNG)
 
+To see it in the browser, open this link : 
+```plaintext
+localhost:50070
+```
+![namenode_browser_1](./screens/VI-Some_Hadoop_Commands/namenode_browser_1.PNG)
+![namenode_browser_2](./screens/VI-Some_Hadoop_Commands/namenode_browser_2.PNG)
+
+When we click on  `aissam_data` we see that it is empty : 
+![namenode_browser_3](./screens/VI-Some_Hadoop_Commands/namenode_browser_3.PNG)
+
+
+2. **copy data example to it :** 
+I have a file in my computer names `myData.txt`, that have this text inside it:
+```plaintext
+windows data Big
+windows 7 installation BigData
+10 guid Big Data
+TESTY TEST
+Windows
+```
+So, let't cpoy it to hadoop:
+```batch
+hdfs dfs -put C:\hadoop\myData.txt /aissam_data/data_.txt
+```
+![data_to_hadoop_1](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_1.PNG)
+
+To list it :
+```batch
+hdfs dfs -ls /
+```
+```batch
+hdfs dfs -ls /aissam_data
+```
+![data_to_hadoop_2](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_2.PNG)
+
+To see its size : 
+```batch
+hadoop fs -du /aissam_data/data_.txt
+```
+![data_to_hadoop_3](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_3.PNG)
+
+To see its contenue : 
+```batch
+hadoop fs -cat /aissam_data/data_.txt
+```
+![data_to_hadoop_4](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_4.PNG)
+
+
+## VII- Stop Hadoop 
+To stop run : 
+```batch
+stop-dfs
+```
+![stop_hadoop_1](./screens/VII-Stop_Hadoop/stop_hadoop_1.PNG)
+
+Then run : 
+```batch
+stop-yarn
+```
+![stop_hadoop_2](./screens/VII-Stop_Hadoop/stop_hadoop_2.PNG)
