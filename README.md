@@ -52,6 +52,8 @@ to `C:\hadoop\hadoop-2.9.2\bin`. Replacing all files :
 4. **Setup Java 11** 
 To avoid errors, create a folder in `C:\` named `java`, then extract the `jdk-11.0.19_windows-x64_bin.zip` file to `C:\java`, (like we did in step II-1-) :
 ![extract_java_11](./screens/II-Setup_Folders_and_Files/java11/extract_java_11.PNG)
+Here is the output of the extreaction :
+![java11_in_java_folder](./screens/II-Setup_Folders_and_Files/java11/java11_in_java_folder.PNG)
 
 ## III- Setup Environment Variables 
 click on `windows key` then search for `environment variables`, then click on `edit environment variables for your account`
