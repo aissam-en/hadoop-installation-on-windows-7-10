@@ -145,6 +145,7 @@ C:\java\jdk-11.0.19\bin;C:\hadoop\hadoop-2.9.2\bin;C:\hadoop\hadoop-2.9.2\sbin;C
 ## IV- Setup Configuration Files 
 
 Go to `C:\hadoop\hadoop-2.9.2\etc\hadoop` to find the file that we will edit.
+![configuration_files](./screens/IV-Setup_Configuration_Files/configuration_files.PNG)
 
 1. **Modifying the `core-site.xml` file :** 
 ```plaintext
