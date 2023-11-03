@@ -1,0 +1,159 @@
+﻿open cmd.exe : 
+
+verifying haddop :
+	hadoop version
+
+first time to start hadoop use : 
+	hdfs namenode -format
+
+start hadoop :
+	start-dfs
+	start-yarn
+or : start-all
+
+
+see all running jobs/processus:
+	jps
+
+
+Note: 
+	jps command should show:
+	11111 jps
+	11111 NodeManager
+	11111 NameNode
+	11111 ResourceManager
+	11111 DataNode
+
+
+(the "/" is important here: )
+	hadoop fs -ls /
+
+	hadoop fs -mkdir /aissam_hadoop_data
+	hadoop fs -ls /
+
+	hdfs dfs -put C:\hadoop\myData.txt /aissam_hadoop_data/mytesty-hd.txt
+	hdfs dfs -ls /
+
+	hdfs dfs -ls /aissam_hadoop_data
+
+	hadoop fs -du /aissam_hadoop_data/mytesty-hd.txt
+
+	hadoop fs -cat /aissam_hadoop_data/mytesty-hd.txt
+
+
+stop hadoop :
+	stop-dfs
+	stop-yarn
+or : stop-all
+
+____________________________________________________________________________________
+------------------------------------------------------------------------------------
+
+============= other Commands =============
+
+hadoop fs -mkdir -p /hadoop/rep1
+
+http://localhost:50070
+
+hadoop fs -mkdir -p /hadoop/rep2 /hadoop/rep3
+
+hadoop fs -ls /hadoop
+
+hadoop fs -copyFromLocal /c:/data/data.txt /hadoop/rep1
+
+hadoop fs -ls -R /hadoop/rep1
+
+hadoop fs -ls -R /hadoop
+
+hadoop fs -put /c:/data/data.txt /hadoop
+
+hadoop fs -put /c:/data/data1.txt /c:/data/data2.txt /hadoop
+
+hadoop fs -put /c:/data/data3.txt hdfs://localhost:9000/hadoop
+
+Hadoop fs -ls -R /hadoop
+
+
+=========================
+
+
+Hadoop fs -put - hdfs://localhost:9000/hadoop
+
+Hadoop fs -copyFromLocal - hdfs://localhost:9000/hadoop/file.txt
+
+( we use - as source, that ,eans that the clavier is the source)
+(Start writing some data, whene you finished click Ctrl+C )
+
+
+=========================
+
+
+Hadoop fs -get /hadoop/data1.txt /c:/hadoop/temp
+Hadoop fs -get hdfs://localhost:9000/hadoop/data2.txt /c:/hadoop/temp
+Hadoop fs -copyToLocal /hadoop/data3.txt /c:/hadoop/temp
+
+
+=========================
+
+
+hadoop fs -cat /hadoop/data1.txt
+
+
+=========================
+
+
+hadoop fs -cp /hadoop/data1.txt /hadoop/rep1
+hadoop fs -cp /hadoop/data2.txt /hadoop/data3.txt /hadoop/rep2
+
+
+=========================
+
+
+hadoop fs -mv /hadoop/rep1/data.txt /hadoop/rep3
+hadoop fs -mv hdfs://localhost:9000/hadoop/rep1/data.txt /hadoop/rep3
+hadoop fs -mv /hadoop/data1.txt mv /hadoop/data2.txt /hadoop/rep3
+hadoop fs -mv /hadoop/rep3/data1.txt /hadoop/rep1/NewName.txt
+hadoop fs -mv /hadoop/rep1/NewName.txt /hadoop/rep1/Name.txt
+
+
+=========================
+
+
+hadoop fs -rm /hadoop/rep2/data2.txt
+[
+	so, data2.txt will be deleted, 
+	If you want to move it to Trash, you should make some changes in core-site.xml : 
+	Property name is : 
+		fs.trash.interval
+	Value en minutes is :
+		1440
+	
+	( I already configured it. )
+]
+
+
+=========================
+
+
+hadoop fs -rm -skipTrash /hadoop/rep2/data3.txt
+
+hadoop fs -chmod 777 /user
+hadoop fs -chmod 777 /user/Aissam     (Aissam is the name of my user)
+hadoop fs -chmod 777 /user/Aissam/.Trash
+hadoop fs -chmod 777 /user/Aissam/.Trash/Current
+hadoop fs -chmod 777 /user/Aissam/.Trash/Current/hadoop
+
+
+=========================
+
+
+hadoop fs -rm -r /hadoop/rep2
+
+
+=========================
+
+
+hadoop fs -rmdir /hadoop/rep1    (the folder rep1 should be empty)
+
+
+=========================
