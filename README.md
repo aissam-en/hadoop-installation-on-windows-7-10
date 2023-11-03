@@ -213,9 +213,52 @@ Go to `C:\hadoop\hadoop-2.9.2\etc\hadoop` to find the file that we will edit.
     set JAVA_HOME=%JAVA_HOME%
 ```
 
-
-
 ## V- Testing 
+
+1. **Verifying hadoop :** 
+Use this command in the cmd :
+```batch
+hadoop version
+```
+screen: 
+![hadoop_version](./screens/V-Testing/hadoop_version.PNG)
+
+2. **Formatting Namenode :** 
+Only for the first time to start hadoop use : 
+```batch
+hdfs namenode -format
+```
+
+3. **Start hadoop :** 
+First run : 
+```batch
+start-dfs
+```
+and two windows will popup : 
+![start_hadoop_1](./screens/V-Testing/start_hadoop_1.PNG)
+
+Then run : 
+```batch
+start-yarn
+```
+and two windows will popup : 
+![start_hadoop_2](./screens/V-Testing/start_hadoop_2.PNG)
+
+4. **jps :** 
+To verify that all works, run : 
+```batch
+jps
+```
+The output is like : 
+```plaintext
+6896 NodeManager
+6388 ResourceManager
+8488 DataNode
+2028 NameNode
+9788 Jps
+```
+![jps](./screens/V-Testing/jps.PNG)
+
 
 ## VI- Some Hadoop Commands 
 
