@@ -15,6 +15,7 @@ This tutorial will show you how to install Hadoop on Windows 7, breaking down th
 ## I- Download Files 
 
 * Download Hadoop [hadoop-2.9.2.tar.gz](https://archive.apache.org/dist/hadoop/core/hadoop-2.9.2/)
+
 ![hadoop-2.9.2](./screens/I-Download_Files/1-hadoop-2.9.2.png)
 
 * Download [java 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
