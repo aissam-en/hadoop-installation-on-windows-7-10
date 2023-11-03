@@ -19,50 +19,74 @@ This tutorial will show you how to install Hadoop on Windows 7, breaking down th
 ![hadoop-2.9.2](./screens/I-Download_Files/1-hadoop-2.9.2.png)
 
 * Download [java 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
+
 ![java11](./screens/I-Download_Files/2-java11.png)
 
 * Download [winutils](https://github.com/cdarlint/winutils/tree/master), we will need the bin files that are in [hadoop-2.9.2/bin](https://github.com/cdarlint/winutils/tree/master/hadoop-2.9.2/bin)
+
 ![winutils](./screens/I-Download_Files/3-winutils.png)
 
 ## II- Setup Folders and Files 
 
 1. **Create new folder in `C:\` named `hadoop`** 
+
 ![hadoop_folders_0](./screens/II-Setup_Folders_and_Files/hadoop/hadoop_folders_0.png)
+
 We will extract `hadoop-2.9.2.tar.gz` to this folder `C:\hadoop\`.
+
 ![extract_hadoop_1](./screens/II-Setup_Folders_and_Files/hadoop/extract_hadoop_1.png)
+
 ![extract_hadoop_2](./screens/II-Setup_Folders_and_Files/hadoop/extract_hadoop_2.png)
 
 2. **Created 3 folders** 
 - First folder named `data`, should be created in `C:\hadoop\hadoop-2.9.2\`. Like `C:\hadoop\hadoop-2.9.2\data`.
+
 ![hadoop_folders_1](./screens/II-Setup_Folders_and_Files/hadoop/hadoop_folders_1.PNG)
+
 - Second folder named `datanode`, should be created in `C:\hadoop\hadoop-2.9.2\data\`. Like `C:\hadoop\hadoop-2.9.2\data\datanode`.
 - Third folder named `namenode`, should be created also in `C:\hadoop\hadoop-2.9.2\data\`. Like `C:\hadoop\hadoop-2.9.2\data\namenode`.
+
 ![hadoop_folders_2](./screens/II-Setup_Folders_and_Files/hadoop/hadoop_folders_2.PNG)
 
 3. **Extract the `winutils-master.zip` file** 
+
 ![extract_winutils_1](./screens/II-Setup_Folders_and_Files/winutils/extract_winutils_1.png)
+
 Enter to `winutils-master` :
+
 ![extract_winutils_2](./screens/II-Setup_Folders_and_Files/winutils/extract_winutils_2.png)
+
 We will using Hadoop 2.9.2 :
+
 ![extract_winutils_3](./screens/II-Setup_Folders_and_Files/winutils/extract_winutils_3.png)
+
 so we will copy all files that are in the bin folder of hadoop-2.9.2 folder `winutils-master\hadoop-2.9.2\bin\` : 
+
 ![copy_bin_from](./screens/II-Setup_Folders_and_Files/winutils/copy_bin_from.png)
+
 to `C:\hadoop\hadoop-2.9.2\bin`. Replacing all files : 
+
 ![copy_bin_to](./screens/II-Setup_Folders_and_Files/winutils/copy_bin_to.png)
 
 4. **Setup Java 11** 
 To avoid errors, create a folder in `C:\` named `java`, then extract the `jdk-11.0.19_windows-x64_bin.zip` file to `C:\java`, (like we did in step II-1-) :
+
 ![extract_java_11](./screens/II-Setup_Folders_and_Files/java11/extract_java_11.PNG)
+
 Here is the output of the extreaction :
+
 ![java11_in_java_folder](./screens/II-Setup_Folders_and_Files/java11/java11_in_java_folder.PNG)
 
 ## III- Setup Environment Variables 
 click on `windows key` then search for `environment variables`, then click on `edit environment variables for your account`
+
 ![win_key](./screens/III-Setup_Environment_Variables/win_key.PNG)
 
 1. **JAVA_HOME :** 
 If you don't have a `JAVA_HOME` variable, click on `new` to add it :
+
 ![click_new_envirenment_variable](./screens/III-Setup_Environment_Variables/click_new_envirenment_variable.PNG)
+
 - Then in the `variable name` type : 
 ```plaintext 
 JAVA_HOME
@@ -71,6 +95,7 @@ JAVA_HOME
 ```plaintext 
 C:\java\jdk-11.0.19
 ```
+
 ![JAVA_HOME_envirenment_variable](./screens/III-Setup_Environment_Variables/JAVA_HOME_envirenment_variable.PNG)
 
 2. **HADOOP_HOME :** 
@@ -82,14 +107,15 @@ HADOOP_HOME
 ```plaintext 
 C:\hadoop\hadoop-2.9.2
 ```
-![HADOOP_HOME_envirenment_variable](./screens/III-Setup_Environment_Variables/HADOOP_HOME_envirenment_variable.PNG)
 
+![HADOOP_HOME_envirenment_variable](./screens/III-Setup_Environment_Variables/HADOOP_HOME_envirenment_variable.PNG)
 
 3. **Path :** 
 Scroll to `Path` and select it, then click on `Edit`, and add this to the begining of  `variable value` type : 
 ```plaintext 
 %JAVA_HOME%\bin;%HADOOP_HOME%\bin;%HADOOP_HOME%\sbin;
 ```
+
 ![Path_envirenment_variable](./screens/III-Setup_Environment_Variables/Path_envirenment_variable.PNG)
 
 
@@ -105,6 +131,7 @@ java version "11.0.19" 2023-04-18 LTS
 Java(TM) SE Runtime Environment 18.9 (build 11.0.19+9-LTS-224)
 Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.19+9-LTS-224, mixed mode)
 ```
+
 ![verifying_1_java-version](./screens/III-Setup_Environment_Variables/verifying_1_java-version.PNG)
 
 
@@ -117,6 +144,7 @@ The output should be like :
 ```plaintext 
 C:\java\jdk-11.0.19
 ```
+
 ![verifying_2_JAVA_HOME](./screens/III-Setup_Environment_Variables/verifying_2_JAVA_HOME.PNG)
 
 
@@ -129,6 +157,7 @@ The output should be like :
 ```plaintext 
 C:\hadoop\hadoop-2.9.2
 ```
+
 ![verifying_3_HADOOP_HOME](./screens/III-Setup_Environment_Variables/verifying_3_HADOOP_HOME.PNG)
 
 
@@ -141,11 +170,13 @@ The output should be like :
 ```plaintext 
 C:\java\jdk-11.0.19\bin;C:\hadoop\hadoop-2.9.2\bin;C:\hadoop\hadoop-2.9.2\sbin;C:\Use...
 ```
+
 ![verifying_4_PATH](./screens/III-Setup_Environment_Variables/verifying_4_PATH.PNG)
 
 ## IV- Setup Configuration Files 
 
 Go to `C:\hadoop\hadoop-2.9.2\etc\hadoop` to find the file that we will edit.
+
 ![configuration_files](./screens/IV-Setup_Configuration_Files/configuration_files.PNG)
 
 1. **Modifying the `core-site.xml` file :** 
@@ -221,7 +252,7 @@ Use this command in the cmd :
 ```batch
 hadoop version
 ```
-screen: 
+
 ![hadoop_version](./screens/V-Testing/hadoop_version.PNG)
 
 2. **Formatting Namenode :** 
@@ -236,6 +267,7 @@ First run :
 start-dfs
 ```
 and two windows will popup : 
+
 ![start_hadoop_1](./screens/V-Testing/start_hadoop_1.PNG)
 
 Then run : 
@@ -243,6 +275,7 @@ Then run :
 start-yarn
 ```
 and two windows will popup : 
+
 ![start_hadoop_2](./screens/V-Testing/start_hadoop_2.PNG)
 
 4. **jps :** 
@@ -258,6 +291,7 @@ The output is like :
 2028 NameNode
 9788 Jps
 ```
+
 ![jps](./screens/V-Testing/jps.PNG)
 
 5. **Verify namenode :** 
@@ -265,6 +299,7 @@ In a browser, open this link :
 ```plaintext
 localhost:50070
 ```
+
 ![namenode_browser](./screens/V-Testing/namenode_browser.PNG)
 
 6. **Verify Resourcemanger :** 
@@ -272,6 +307,7 @@ In a browser, open this link :
 ```plaintext
 http://localhost:8088
 ```
+
 ![Resourcemanger_browser](./screens/V-Testing/Resourcemanger_browser.PNG)
 
 
@@ -286,16 +322,20 @@ and show it :
 ```batch
 hadoop fs -ls /
 ```
+
 ![mkdir_ls](./screens/VI-Some_Hadoop_Commands/mkdir_ls.PNG)
 
 To see it in the browser, open this link : 
 ```plaintext
 localhost:50070
 ```
+
 ![namenode_browser_1](./screens/VI-Some_Hadoop_Commands/namenode_browser_1.PNG)
+
 ![namenode_browser_2](./screens/VI-Some_Hadoop_Commands/namenode_browser_2.PNG)
 
 When we click on  `aissam_data` we see that it is empty : 
+
 ![namenode_browser_3](./screens/VI-Some_Hadoop_Commands/namenode_browser_3.PNG)
 
 
@@ -312,6 +352,7 @@ So, let't cpoy it to hadoop:
 ```batch
 hdfs dfs -put C:\hadoop\myData.txt /aissam_data/data_.txt
 ```
+
 ![data_to_hadoop_1](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_1.PNG)
 
 To list it :
@@ -321,18 +362,21 @@ hdfs dfs -ls /
 ```batch
 hdfs dfs -ls /aissam_data
 ```
+
 ![data_to_hadoop_2](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_2.PNG)
 
 To see its size : 
 ```batch
 hadoop fs -du /aissam_data/data_.txt
 ```
+
 ![data_to_hadoop_3](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_3.PNG)
 
 To see its contenue : 
 ```batch
 hadoop fs -cat /aissam_data/data_.txt
 ```
+
 ![data_to_hadoop_4](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_4.PNG)
 
 * for more command, see /2_hadoop_commands\hadoop_commands.txt
@@ -342,11 +386,13 @@ To stop run :
 ```batch
 stop-dfs
 ```
+
 ![stop_hadoop_1](./screens/VII-Stop_Hadoop/stop_hadoop_1.PNG)
 
 Then run : 
 ```batch
 stop-yarn
 ```
+
 ![stop_hadoop_2](./screens/VII-Stop_Hadoop/stop_hadoop_2.PNG)
 
