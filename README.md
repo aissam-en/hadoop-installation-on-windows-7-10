@@ -348,3 +348,4 @@ Then run :
 stop-yarn
 ```
 ![stop_hadoop_2](./screens/VII-Stop_Hadoop/stop_hadoop_2.PNG)
+
