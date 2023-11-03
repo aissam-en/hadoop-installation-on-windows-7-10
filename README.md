@@ -334,6 +334,7 @@ hadoop fs -cat /aissam_data/data_.txt
 ```
 ![data_to_hadoop_4](./screens/VI-Some_Hadoop_Commands/data_to_hadoop_4.PNG)
 
+* for more command, see /2_hadoop_commands\hadoop_commands.txt
 
 ## VII- Stop Hadoop 
 To stop run : 
