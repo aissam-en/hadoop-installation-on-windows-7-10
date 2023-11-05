@@ -1,0 +1,10 @@
+- Dwnload hadoop-2.9.2.tar.gz : 
+https://drive.google.com/file/d/1nr2wIvILhVtCNQeBKReilXzKnMDpSQvp/view?usp=sharing
+
+
+- Dwnload jdk-11.0.19_windows-x64_bin.zip : 
+https://drive.google.com/file/d/1NU-1VgL_zGlbiEqzw6K3WvJJCBc5DZhg/view?usp=sharing
+
+
+- Dwnload winutils-master.zip : 
+https://drive.google.com/file/d/1E3tvmVWrpi7FL6ZRQ6AsZgVSr-0fsJvv/view?usp=sharing

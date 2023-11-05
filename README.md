@@ -1,6 +1,6 @@
 # Install Hadoop in Windows 7
-A guid to walk through the Hadoop installation process on a Windows 7 (for Windows 10 see [How to install Hadoop in 5 Steps in Windows 10](https://medium.com/analytics-vidhya/hadoop-how-to-install-in-5-steps-in-windows-10-61b0e67342f8)). 
-This tutorial will show you how to install Hadoop on Windows 7, breaking down the installation into clear steps. 
+A guide to walk through the Hadoop installation process on windows 7 (for Windows 10 see [How to install Hadoop in 5 Steps in Windows 10](https://medium.com/analytics-vidhya/hadoop-how-to-install-in-5-steps-in-windows-10-61b0e67342f8)). 
+This tutorial will show how to install Hadoop on Windows 7, breaking down the installation into clear steps. 
 
 ## Table of Contents
 
